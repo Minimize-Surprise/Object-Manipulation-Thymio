@@ -1,0 +1,161 @@
+#VRML_SIM R2020a utf8
+WorldInfo {
+  basicTimeStep 10
+  randomSeed -1
+  contactProperties [
+    ContactProperties {
+      material2 "thymio body"
+      coulombFriction [
+        0.7
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.9999999999994652 -1.0208646946287416e-06 -1.6516367753722663e-07 4.712392554380692
+  position 4.440892098500626e-16 3.369751337513903 8.881784197001252e-16
+  followType "None"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+  luminosity 0
+}
+Floor {
+  size 1.1 1.1
+  appearance CarpetFibers {
+    colorOverride 0.180392 0.203922 0.211765
+  }
+}
+Wall {
+  translation 0.67 0 0
+  rotation 0 1 0 -1.5707953071795862
+  size 1.34 0.05 0.01
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 0.1 1
+    }
+  }
+}
+Wall {
+  translation -0.19 0.9 8.76858e-07
+  rotation 0 1 0 -1.5707953071795862
+  name "wall(4)"
+  size 1.34 0.58 0.01
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 0.1 1
+    }
+  }
+}
+Wall {
+  translation 0 0 0.67
+  name "wall(1)"
+  size 1.34 0.05 0.01
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 0.1 1
+    }
+  }
+}
+Wall {
+  translation -0.67 0 0
+  rotation 0 1 0 -1.5707953071795862
+  name "wall(2)"
+  size 1.34 0.05 0.01
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 0.1 1
+    }
+  }
+}
+Wall {
+  translation 0 0 -0.67
+  name "wall(3)"
+  size 1.34 0.05 0.01
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 0.1 1
+    }
+  }
+}
+DEF T_master Thymio2_A {
+  translation 1.0999997884268768 -1.9674602611659264e-05 -0.08000000004313274
+  rotation -0.004695925700562875 0.9999779486075983 0.004695804548164931 1.5708099996922127
+  name "T_master"
+  controller "evolution_multiple"
+  supervisor TRUE
+  bodySlot [
+    Receiver {
+      channel 1
+    }
+    Emitter {
+      channel 2
+    }
+  ]
+}
+DEF T1 Thymio2_A {
+  translation 0 0.0015 -0.1
+  rotation 1.3096499661498426e-06 0.9999889741535638 -0.0046959098786261266 3.14105
+  name "T1"
+  controller "evolution_multiple"
+  controllerArgs "slave"
+  bodySlot [
+    Emitter {
+      channel 1
+    }
+    Receiver {
+      channel 2
+    }
+  ]
+}
+DEF T2 Thymio2_A {
+  translation 0.1 0.0015 0
+  rotation 0.004695819702876934 -0.9999779367274451 0.004698439702711156 -1.5702753071795863
+  name "T2"
+  controller "evolution_multiple"
+  controllerArgs "slave"
+  bodySlot [
+    Emitter {
+      channel 1
+    }
+    Receiver {
+      channel 2
+    }
+  ]
+}
+DEF T3 Thymio2_A {
+  translation 0 0.0015 0.1
+  rotation 0.9983322164092902 0.057729612514095266 0.0002784210603535607 -0.009405307179585876
+  name "T3"
+  controller "evolution_multiple_pressure_light_sparse"
+  controllerArgs "slave"
+  bodySlot [
+    Emitter {
+      channel 1
+    }
+    Receiver {
+      channel 2
+    }
+  ]
+}
+DEF T4 Thymio2_A {
+  translation -0.1 0.0015 0
+  rotation 0.004694779864300409 0.9999779710962802 -0.004692159864376138 -1.571365307179586
+  name "T4"
+  controller "evolution_multiple"
+  controllerArgs "slave"
+  bodySlot [
+    Emitter {
+      channel 1
+    }
+    Receiver {
+      channel 2
+    }
+  ]
+}
+betterSpotlight {
+  translation -0.39 1.85 0.02
+  cutOffAnglee 0.4
+  beamWidthh 0.4
+}
