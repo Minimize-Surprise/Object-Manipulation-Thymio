@@ -1,6 +1,6 @@
 # Object Manipulation Behaviors with Minimize Surprise
 
-contributors: Tanja Katharina Kaiser, Florian Marwitz, Christine Lang, Max Hannawald, Christian Charles, Till Aust, Heiko Hamann 
+contributors: Tanja Katharina Kaiser, Florian Marwitz, Christine Lang, Max Hannawald, Christian Charles, Till Aust, Marian Begemann, Heiko Hamann 
 
 ## Webots
 
